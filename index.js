@@ -4,7 +4,7 @@ const Chalk = require('./node_modules/chalk');
 const Database = require('./database');
 const loadedFile = Database.load('team.json');
 
-const allBlacks = new Team(loadedFile.name);
+const allBlacks = new Team(loadedFile.name, loadedFile.teamMembers);
 
 // const jonaLumo = new Player('Jona Lumo');
 
