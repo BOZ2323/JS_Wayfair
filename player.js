@@ -4,7 +4,7 @@ module.exports = class Player{
         
     }
     joinTeam(team){
-        this.team = team;
-        team.allTeam.push(this);
+        this.team = team.name;
+        team.teamMembers.push(this);
     }
 }

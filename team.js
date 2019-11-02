@@ -1,4 +1,4 @@
-const chalk = require('./node_modules/chalk');
+const Chalk = require('./node_modules/chalk');
 
 module.exports = class Team{
     constructor(name){
