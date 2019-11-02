@@ -1,22 +1,27 @@
 const Player = require('./player');
 const Team = require('./team');
 const Chalk = require('./node_modules/chalk');
-const Database = require('./database')
+const Database = require('./database');
+const loadedFile = Database.load('team.json');
 
-const jonaLumo = new Player('Jona Lumo');
+const allBlacks = new Team(loadedFile.name);
 
-const allBlacks = new Team("All Blacks");
+// const jonaLumo = new Player('Jona Lumo');
 
-jonaLumo.joinTeam(allBlacks);
+// const allBlacks = new Team("All Blacks");
 
-allBlacks.printTeamMembers();
+// jonaLumo.joinTeam(allBlacks);
 
-console.log(allBlacks.name);
+// allBlacks.printTeamMembers();
 
-Database.save('team.json', allBlacks)
-const loadedFile = Database.load('team.json')
+// console.log(allBlacks.name);
 
-console.log(Chalk.bgRed.bold(loadedFile.name))
+// Database.save('team.json', allBlacks)
+
+
+console.log(allBlacks.printTeamMembers());
+
+console.log(Chalk.bgRed.bold(loadedFile.name));
 
 
 
