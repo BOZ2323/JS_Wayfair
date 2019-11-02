@@ -6,6 +6,12 @@ const loadedFile = Database.load('team.json');
 
 const allBlacks = new Team(loadedFile.name, loadedFile.teamMembers);
 
+const southAfrica = new Team(loadedFile.name, loadedFile.teamMembers);
+
+const siyaKolisi = new Player('siya Kolisi');
+
+siyaKolisi.joinTeam(southAfrica)
+
 // const jonaLumo = new Player('Jona Lumo');
 
 // const allBlacks = new Team("All Blacks");
