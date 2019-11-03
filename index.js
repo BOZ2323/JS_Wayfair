@@ -4,9 +4,9 @@ const Chalk = require('./node_modules/chalk');
 const Database = require('./database');
 const loadedFile = Database.load('team.json');
 
-const allBlacks = new Team(loadedFile.name, loadedFile.teamMembers);
+const allBlacks = Team.create(loadedFile);
 
-const southAfrica = new Team(loadedFile.name, loadedFile.teamMembers);
+const southAfrica = Team.create(loadedFile);
 
 const siyaKolisi = new Player('siya Kolisi');
 
