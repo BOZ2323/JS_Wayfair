@@ -8,6 +8,9 @@ module.exports = class Team{
     printTeamMembers(){
         this.teamMembers.forEach(printName);
     }
+    static create(obj){
+        return new Team(obj.name, obj.teamMembers);
+    }
 }
 
 const printName = player => console.log(Chalk.bgGreen(player.name));
